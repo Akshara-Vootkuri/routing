@@ -4,10 +4,34 @@ export const Header=()=>{
     return(
         <>
             <nav>
-                <NavLink to="/" className={({ isActive })=>(isActive?"active":"")}>Home</NavLink>
-                <NavLink to="/posts">Posts</NavLink>
-                <NavLink to="/users">Users</NavLink>
-                <NavLink to="/todos">Todos</NavLink>
+                <NavLink to="/" 
+                    style={({isActive})=>{
+                    return{
+                        backgroundColor:isActive?"#04AA60":""
+                    }
+                    }} >
+                Home</NavLink>
+                <NavLink to="/posts" 
+                    style={({isActive})=>{
+                        return{
+                            backgroundColor:isActive?"#04AA60":""
+                        }
+                    }}>
+                Posts</NavLink>
+                <NavLink to="/users" 
+                    style={({isActive})=>{
+                        return{
+                            backgroundColor:isActive?"#04AA60":""
+                        }
+                    }}>
+                Users</NavLink>
+                <NavLink to="/todos"
+                    style={({isActive})=>{
+                        return{
+                            backgroundColor:isActive?"#04AA60":""
+                        }
+                    }} >
+                Todos</NavLink>
             </nav>
         </>
     )
