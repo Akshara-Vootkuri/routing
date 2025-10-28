@@ -7,24 +7,37 @@ import {Posts} from './Pages/Posts'
 import {Users} from './Pages/Users'
 import {Todos} from './Pages/Todos'
 import { Layout } from './Components/Layout'
+import { Error } from './Components/Error'
+import { GetAPIUsers } from './api/GetAPIUsers'
+import { GetAPIPosts } from './api/GetAPIPosts'
+import { PostLoader } from './api/PostLoader'
+import { TodoLoader } from './api/TodoLoader'
 function App() {
 
   const router=createBrowserRouter([
     {
       path:"/",
       element:<Layout/>,
+      errorElement:<Error/>,
       children:[
         {
-          path:"/posts",
-          element:<Posts/>
+          path:"/",
+          element:<Home/>
+        },
+        {
+          path:"/posts/:page?",
+          element:<Posts/>,
+          loader:PostLoader
         },
         {
           path:"/users",
-          element:<Users/>
+          element:<Users/>,
+          loader:GetAPIUsers
         },
         {
-          path:"/todos",
-          element:<Todos/>
+          path:"/todos/:page?",
+          element:<Todos/>,
+          loader:TodoLoader
         }
       ]
     }

@@ -1,7 +1,17 @@
+import { useLoaderData } from "react-router-dom"
+import { UserCard } from "../Components/UserCard";
+
 export const Users=()=>{
+    const userData=useLoaderData();
     return(
         <>
-            <p>users page</p>
+            {console.log(userData)}
+            {userData&& 
+                userData.map((user)=>{
+                    return <UserCard key={user.id} value={user}/>
+                })
+            }
+
         </>
     )
 }

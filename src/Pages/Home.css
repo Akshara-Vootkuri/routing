@@ -1,0 +1,25 @@
+.container {
+  text-align: center;
+  padding: 60px 20px;
+  min-height: 80vh;
+  color: #333;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0078d7;
+}
+
+.container p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.container strong {
+  color: #04AA6D;
+}
+
+.container b {
+  color: #333;
+}
