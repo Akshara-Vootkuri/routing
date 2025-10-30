@@ -4,6 +4,8 @@ nav {
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
+    flex-wrap: wrap; 
+
 }
 nav a {
     color: white;
@@ -17,7 +19,17 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* nav a.active {
-    background-color: #04AA6D;
-    border-radius: 5px;
-} */
+@media (max-width: 600px) {
+   nav {
+    flex-direction: column;
+    align-items: stretch; 
+  }
+
+  nav a {
+    display: block;
+    margin: 0;              
+    padding: 12px 0;       
+    width: 100%;            
+    text-align: center;
+  }
+}
