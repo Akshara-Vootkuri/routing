@@ -6,6 +6,7 @@ export const Users=()=>{
     return(
         <>
             {console.log(userData)}
+            {!userData&&<p>Loading...</p>}
             {userData&& 
                 userData.map((user)=>{
                     return <UserCard key={user.id} value={user}/>

@@ -1,15 +1,27 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./posts.css"
 export const Posts = () => {
   const { data, page } = useLoaderData();
+   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleNext = () => navigate(`/posts/${page + 1}`);
-  const handlePrev = () => navigate(`/posts/${page - 1}`);
+  const handleNext = () => {
+     setLoading(true);
+    navigate(`/posts/${page + 1}`);
+  }
+  const handlePrev = () =>{ 
+    setLoading(true)
+    navigate(`/posts/${page - 1}`);
+  }
+   useEffect(() => {
+    setLoading(false);
+  }, [data]);
 
   return (
     <>
-      {data.map((post) => (
+      {loading && <p>Loading...</p>}
+      {!loading&&data.map((post) => (
         <div key={post.id} className="post-card">
           <h3 >{post.title}</h3>
           <p >{post.body}</p>
