@@ -1,0 +1,59 @@
+
+.indv-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f9fafb;
+}
+
+.card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+.title {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 16px;
+}
+
+.info {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.back {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.back-btn:hover {
+  background-color: #1e40af;
+  transform: scale(1.03);
+}
+
+.loading-text {
+  text-align: center;
+  color: #555;
+}
+
+.error-text {
+  text-align: center;
+  color: red;
+}

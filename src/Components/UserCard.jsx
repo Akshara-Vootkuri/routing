@@ -7,6 +7,7 @@ export const UserCard=(props)=>{
             <h3 className="user-detail">Email is {email}</h3>
             <h4 className="user-detail">Phone num is {phone}</h4>
             <h5 className="user-detail">Address is {address.city}</h5>
+            <h6>click on this to enter full view</h6>
         </div>
     )
 }

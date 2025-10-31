@@ -12,6 +12,7 @@ import { GetAPIUsers } from './api/GetAPIUsers'
 import { GetAPIPosts } from './api/GetAPIPosts'
 import { PostLoader } from './api/PostLoader'
 import { TodoLoader } from './api/TodoLoader'
+import { Userindv } from './Components/Userindv'
 function App() {
 
   const router=createBrowserRouter([
@@ -33,6 +34,10 @@ function App() {
           path:"/users",
           element:<Users/>,
           loader:GetAPIUsers
+        },
+        {
+          path:"/users/:id",
+          element:<Userindv/>
         },
         {
           path:"/todos/:page?",
